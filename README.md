@@ -6,13 +6,13 @@
 
 <br/>
 
-A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention.
+A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention. No re-prompting your way to an answer you should have gotten on attempt one.
 
-Works with: Claude, ChatGPT, Gemini, o1/o3, Cursor, Claude Code, GitHub Copilot, Windsurf, Bolt, v0, Lovable, Devin, Perplexity, Midjourney, DALL-E, Stable Diffusion, ComfyUI, Sora, Runway, ElevenLabs, Zapier, Make, and any AI tool you throw at it.
+**Works with:** Claude, ChatGPT, Gemini, o1/o3, Cursor, Claude Code, GitHub Copilot, Windsurf, Bolt, v0, Lovable, Devin, Perplexity, Midjourney, DALL-E, Stable Diffusion, ComfyUI, Sora, Runway, ElevenLabs, Zapier, Make, and any AI tool you throw at it.
 
 ---
 
-## 🔧 Installation
+## 🚀 Installation
 
 ### Recommended Claude.ai (browser)
 
@@ -35,6 +35,20 @@ If you already have this repo cloned (or downloaded `SKILL.md`), copy the skill 
 mkdir -p ~/.claude/skills/prompt-master
 cp SKILL.md ~/.claude/skills/prompt-master/
 ```
+
+## 🔥 The Problem This Solves
+
+Every AI user wastes credits the same way:
+
+> Write vague prompt → get wrong output → re-prompt → get closer → re-prompt again → finally get what you wanted on attempt 4
+
+That's 3 wasted API calls. Multiply by 50 prompts a day. That's real money and real time gone.
+
+### The key insight
+
+> "The best prompt is not the longest. It's the one where every word is load-bearing."
+
+Most "prompt generators" make prompts longer. This skill makes them sharper.
 
 ---
 
@@ -76,36 +90,20 @@ I want to ask Claude Code to build a todo app with React and Supabase
 
 ---
 
-## 🛠️ The Problem This Solves
-
-Every AI user burns credits the same way:
-
-> Write vague prompt → get wrong output → re-prompt → get closer → re-prompt again → finally get what you wanted on attempt 4
-
-That's 3 wasted API calls. Multiply by 50 prompts a day. That's real money and real time gone.
-
-### Key Insight
-
-> "The best prompt is not the longest — it's the one where every word is load-bearing."
-
-Most "prompt generators" make prompts longer. This skill makes them sharper.
-
----
-
 ## How It Works
 
 Prompt Master runs a structured pipeline on every request:
 
-1. **Detects the target tool** — identifies which AI system the prompt is for and routes silently to the right approach
+1. **Detects the target tool** — figures out which AI system the prompt is for and routes silently to the right approach
 2. **Extracts 9 dimensions of intent** — task, input, output, constraints, context, audience, memory, success criteria, examples
 3. **Asks targeted clarifying questions** — max 3 questions if critical info is missing, never more
-4. **Routes to the right framework** — selects and applies the correct prompt architecture automatically, never shown to the user
+4. **Routes to the right framework** — picks and applies the correct prompt architecture automatically, never shown to the user
 5. **Applies safe techniques only** — role assignment, few-shot examples, XML structure, grounding anchors, memory block as needed
 6. **Runs a token efficiency audit** — strips every word that doesn't change the output
 7. **Delivers the prompt** — one clean copyable block with a one-line strategy note
 
 ---
-## Full Example #1
+## Full Example #1: Generating Prompts for Images
 
 ### User Input
 ```
@@ -124,7 +122,7 @@ negative: blurry, low quality, watermark, cartoon, anime, extra limbs
 **🎯 Target:** Midjourney · **⚡ Framework:** Visual Descriptor · **💰 Tokens:** Light (~60) · **💡 Strategy:** Comma-separated descriptors over prose, lighting and mood anchored early, aspect ratio and version locked, negative prompt prevents style drift.
 
 ---
-## Full Example #2
+## Full Example #2: Generating Prompts for Coding
 
 ### User Input
 ```
@@ -206,9 +204,13 @@ Done When:
 
 ---
 
-## Works With Any AI Tool
+## 🤝 Works With Any AI Tool
 
-Prompt Master includes specific profiles for 20+ tools. For anything not on the list, it uses a **Universal Fingerprint** — 4 questions that let it write a quality prompt for any AI system it has never seen before.
+Prompt Master includes specific profiles for 20+ tools. For anything not on the list, it uses a **Universal Fingerprint**: 4 questions that let it write a quality prompt for any AI system it has never seen before.
+
+<details>
+
+<summary>View all 20+ tool profiles</summary>
 
 | Tool | Category | What Prompt Master Fixes |
 |------|----------|--------------------------|
@@ -230,6 +232,8 @@ Prompt Master includes specific profiles for 20+ tools. For anything not on the 
 | **Sora / Runway** | Video AI | Camera movement, duration, cut style |
 | **ElevenLabs** | Voice AI | Emotion, pacing, emphasis, speech rate |
 | **Zapier / Make** | Workflow automation | Trigger app + event, action app + field mapping |
+
+</details>
 
 ---
 
@@ -354,7 +358,7 @@ This solves the #1 cause of wasted re-prompts in long sessions.
 
 ---
 
-## References
+## 🔗 References
 
 - [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — Primary source for Claude-specific patterns
 - [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) — GPT-4o best practices
@@ -363,7 +367,7 @@ This solves the #1 cause of wasted re-prompts in long sessions.
 
 ---
 
-## Version History
+## ℹ️ Version History
 
 - **1.4.0** — Added reference image editing detection, ComfyUI support, Prompt Decompiler mode. Fixed trigger description to invoke correctly in Claude Code. 3 new templates added to references folder.
 - **1.3.0** — Rebuilt around PAC2026 positional structure (30/55/15). Silent routing replaces user-facing framework selection. References folder introduced.
@@ -373,13 +377,13 @@ This solves the #1 cause of wasted re-prompts in long sessions.
 
 ---
 
-## License
+## 📄 License
 
-MIT
+MIT: see [LICENSE](LICENSE) for details.
 
 ---
 
-## Star History
+## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=nidhinjs/prompt-master&type=Date)](https://star-history.com/#nidhinjs/claude-skills&Date)
 
