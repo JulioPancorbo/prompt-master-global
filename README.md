@@ -2,7 +2,11 @@
 
 <br/>
 
+<<<<<<< HEAD
 A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention. No re-prompting your way to an answer you should have gotten on attempt one.
+=======
+A portable AI skill that writes accurate prompts for any AI tool, agent, IDE, or model runtime. Zero tokens or credits wasted. Full context and memory retention. No re-prompting your way to an answer you should have gotten on attempt one.
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 
 **Works with:** Claude, ChatGPT, Gemini, o1/o3, MiniMax, Cursor, Claude Code, GitHub Copilot, Windsurf, Bolt, v0, Lovable, Devin, Perplexity, Midjourney, DALL-E, Stable Diffusion, ComfyUI, Sora, Runway, ElevenLabs, Zapier, Make, and any AI tool you throw at it.
 
@@ -10,6 +14,7 @@ A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or 
 
 ## 🚀 Installation
 
+<<<<<<< HEAD
 ### RECOMMENDED - Claude.ai (browser)
 
 1. Download this repo as a ZIP
@@ -23,6 +28,58 @@ mkdir -p ~/.claude/skills
 git clone https://github.com/nidhinjs/prompt-master.git ~/.claude/skills/prompt-master
 ```
 
+=======
+Prompt Master is intentionally packaged as a portable skill folder.
+You can install it anywhere your host supports reusable skills, custom instructions, or attached prompt assets.
+
+### Option 1 - Native skill import or upload
+
+Use this when your host already supports skills, prompt packs, or reusable instruction bundles.
+
+1. Download this repo as a ZIP or clone it locally.
+2. Import or upload the whole folder using your host's native skill/customization UI.
+3. If the host asks for a primary file, point it to `SKILL.md`.
+
+### Option 2 - Drop into a supported skills directory
+
+Use this when your host watches a local skills folder.
+
+```bash
+git clone https://github.com/nidhinjs/prompt-master.git /path/to/your/skills/prompt-master
+```
+
+Examples of valid destinations depend on the host:
+
+- Claude / Claude Code: the host's configured skills directory
+- VS Code agents or custom setups: a workspace or user skills/customization folder supported by that environment
+- Local agent frameworks: any folder that your runner can mount or load as a reusable instruction asset
+
+### Option 3 - Use as a standalone instruction asset
+
+If your environment does not support native skill installation:
+
+1. Open `SKILL.md`.
+2. Paste it into your system prompt, developer prompt, agent instructions, or reusable preset.
+3. Keep the `references/` folder available if your host supports linked files or attachments.
+
+### Host compatibility notes
+
+- The core behavior lives in `SKILL.md` and is host-agnostic.
+- The `references/` folder contains supporting templates and anti-pattern guides.
+- If your host does not support slash commands, invoke it in natural language instead.
+- If your host does not support multi-file skills, `SKILL.md` alone still works as the primary artifact.
+
+## 🧩 Host Packages
+
+Prompt Master now ships with thin host-specific packaging under `hosts/`:
+
+- `hosts/claude/` for native skill-oriented setups that want Claude-specific install notes without changing the canonical skill
+- `hosts/copilot/` for GitHub Copilot and VS Code prompt-based workflows
+- `hosts/generic/` for any environment that accepts a system prompt, developer prompt, or reusable agent preset
+
+The root `SKILL.md` remains the canonical source of behavior. Host packages are lightweight wrappers for easier installation and discovery.
+
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 ## 🔥 The Problem This Solves
 
 Every AI user wastes credits the same way:
@@ -41,6 +98,7 @@ Most "prompt generators" make prompts longer. This skill makes them sharper.
 
 ## 🎯 Usage
 
+<<<<<<< HEAD
 In Claude, you can invoke the skill naturally:
 
 ```
@@ -53,6 +111,20 @@ I need a prompt for Claude Code to build a REST API — ask me what you need to 
 
 ```
 Here's a bad prompt I wrote for GPT-4o, fix it: [paste prompt]
+=======
+In any compatible assistant or IDE, you can invoke the skill naturally:
+
+```
+Write me a prompt to refactor my auth module in my code editor
+```
+
+```
+I need an agent prompt to build a REST API — ask me what you need to know
+```
+
+```
+Here's a bad prompt I wrote for a general chat model, fix it: [paste prompt]
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 ```
 
 ```
@@ -67,12 +139,34 @@ I have a reference image — help me write a prompt to edit just the head angle
 Break this prompt down and adapt it for Stable Diffusion
 ```
 
+<<<<<<< HEAD
 Or explicitly invoke it:
+=======
+If your host supports explicit skill invocation, you can also call it by name:
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 
 ```
 /prompt-master
 
+<<<<<<< HEAD
 I want to ask Claude Code to build a todo app with React and Supabase
+=======
+I want to ask an AI coding agent to build a todo app with React and Supabase
+```
+
+If your host does not support slash-style invocation, just ask naturally:
+
+```
+Use Prompt Master to turn this rough request into a production-ready prompt for my target model.
+```
+
+```
+Adapt this bad prompt so I can use it in my IDE assistant.
+```
+
+```
+Turn this idea into a safe, scoped prompt for an autonomous coding agent.
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 ```
 
 ---
@@ -113,8 +207,13 @@ negative: blurry, low quality, watermark, cartoon, anime, extra limbs
 
 ### User Input
 ```
+<<<<<<< HEAD
 Build a claude code prompt for a landing page for a business 
 dashboard that looks and feels exactly like notion - smooth animations, 
+=======
+Build an agent prompt for a landing page for a business 
+dashboard with a clean editorial product aesthetic, smooth animations, 
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 clean ui
 ```
 
@@ -123,7 +222,11 @@ clean ui
 ```
 Objective:
 Build a fully detailed, production-quality static landing page for a 
+<<<<<<< HEAD
 business dashboard product. Design must match Notion's exact aesthetic — 
+=======
+business dashboard product. Design must match a clean editorial SaaS aesthetic — 
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 clean, minimal, typographic, with smooth animations throughout.
 
 Stack:
@@ -187,7 +290,11 @@ Done When:
 - Hover states work on all interactive elements
 - Opens in browser with zero console errors
 ```
+<<<<<<< HEAD
 **🎯 Target:** Claude Code · **💰 Tokens:** Medium (~380) · **💡 Strategy:** Every vague Notion aesthetic cue translated into exact hex values and pixel specs — Claude Code cannot guess wrong. Animations defined with exact timing, method, and trigger so there is no interpretation needed.
+=======
+**🎯 Target:** Agentic coding assistant · **💰 Tokens:** Medium (~380) · **💡 Strategy:** Vague aesthetic cues were translated into exact hex values, spacing, and behavioral specs so the agent has little room for interpretation.
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 
 ---
 
@@ -195,6 +302,11 @@ Done When:
 
 Prompt Master includes specific profiles for 20+ tools. For anything not on the list, it uses a **Universal Fingerprint**: 4 questions that let it write a quality prompt for any AI system it has never seen before.
 
+<<<<<<< HEAD
+=======
+That means the packaging is portable too: if an environment can load instructions, prompts, skills, presets, or agent docs, Prompt Master can be used there.
+
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 <details>
 <summary><h3> Click to view all 30+ tool profiles </h3></summary>
 
@@ -391,6 +503,10 @@ This is the single biggest fix for long sessions. Most wasted re-prompts come fr
 
 ## ℹ️ Version History
 
+<<<<<<< HEAD
+=======
+- **1.7.0** — Added host-specific packaging for Claude, GitHub Copilot, and generic agent environments. Neutralized installation and example wording so the skill can be distributed as a host-agnostic asset
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 - **1.5.0** — Added more tool routing. New Agentic AI and 3D Model AI routing added. Fixed description to 189 chars. Removed token estimate from output. Added instruction layer and copywriting placeholders
 - **1.4.0** — Added reference image editing detection, ComfyUI support, Prompt Decompiler mode. Fixed trigger description to invoke correctly in Claude Code. 3 new templates added to references folder
 - **1.3.0** — Rebuilt around PAC2026 positional structure (30/55/15). Silent routing replaces user-facing framework selection. References folder introduced
@@ -408,6 +524,10 @@ MIT: See [LICENSE](LICENSE) for details.
 
 ## ⭐ Star History
 
+<<<<<<< HEAD
 [![Star History Chart](https://api.star-history.com/svg?repos=nidhinjs/prompt-master&type=Date)](https://star-history.com/#nidhinjs/claude-skills&Date)
+=======
+[![Star History Chart](https://api.star-history.com/svg?repos=nidhinjs/prompt-master&type=Date)](https://star-history.com/#nidhinjs/prompt-master&Date)
+>>>>>>> 1906322 (feat: Add host packages and reference materials for Prompt Master)
 
 ---
